@@ -1,8 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Invoices Dashboard		</title>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
+    <title>Invoices Dashboard </title>
+    <style>
+        body 
+        {
+            overflow:hidden;
+        }
+        #div-loading-parent
+        {
+            position: absolute;
+            z-index: 20001;
+            height: 100%;
+            width: 100%;
+        }
+        
+        #div-loading-indicator
+        {
+            font-size: large;
+            font-family: tahoma,arial,verdana,sans-serif;
+            background: none repeat scroll 0 0 black;
+            border-radius: 1em;
+            color: white;
+            left: 50%;
+            margin-right: -50%;
+            padding: 1em;
+            position: absolute;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    </style>
     <script type="text/javascript">
         var Ext = Ext || {};
 
@@ -11,7 +41,13 @@
             Ext.disableCacheBuster(true);
         };
     </script>
-    <script src="microloader.js"></script>
 </head>
-<body></body>
+<body>
+    <div id="div-loading-parent">
+        <div id="div-loading-indicator">
+            Loading app. Please wait...</div>
+    </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
+    <script src="microloader.js"></script>
+</body>
 </html>
