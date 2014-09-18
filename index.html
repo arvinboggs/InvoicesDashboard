@@ -1,1 +1,17 @@
-test page only
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoices Dashboard		</title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
+    <script type="text/javascript">
+        var Ext = Ext || {};
+
+        Ext.beforeLoad = function (tags) {
+            console.log('Ext.beforeLoad');
+            Ext.disableCacheBuster(true);
+        };
+    </script>
+    <script src="microloader.js"></script>
+</head>
+<body></body>
+</html>
